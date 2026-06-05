@@ -69,7 +69,7 @@ layers:
   - '1'
   - '2'
   - '3'
-  - '='
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -88,14 +88,14 @@ layers:
   - {t: ▽, type: trans}
   '5':
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Gui+W
   - UP ARROW
+  - Gui+N
+  - Gui+T
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Ctl+LEFT ARROW
+  - F3
+  - Ctl+RIGHT ARROW
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - LEFT ARROW

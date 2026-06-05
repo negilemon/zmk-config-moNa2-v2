@@ -16,7 +16,7 @@ layers:
   - D
   - F
   - G
-  - ''
+  - {t: Gui+Sft+Ctl+4, s: Gui+Sft+4}
   - H
   - J
   - K
@@ -36,12 +36,12 @@ layers:
   - {t: /, h: RIGHT SHIFT}
   - LEFT WIN
   - LCTRL
-  - ''
+  - LEFT ALT
   - {t: BACKSPACE, s: DELETE}
   - {t: SPACE, h: '5'}
   - {t: '&to_layer_0 LANGUAGE_2', h: '1'}
   - {t: LANGUAGE 1, h: RIGHT COMMAND}
-  - ENTER
+  - {t: ENTER, h: '5'}
   - {t: ESCAPE, h: '4'}
   '1':
   - '0'
@@ -75,7 +75,7 @@ layers:
   - {t: ▽, type: trans}
   - <
   - '>'
-  - {t: ▽, type: trans}
+  - '`'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -88,26 +88,33 @@ layers:
   - {t: ▽, type: trans}
   '5':
   - {t: ▽, type: trans}
-  - PREVIOUS
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Ctl+Sft+TAB
   - UP ARROW
-  - NEXT
+  - Ctl+TAB
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Ctl+LEFT ARROW
-  - F3
-  - Ctl+RIGHT ARROW
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - LEFT ARROW
   - DOWN ARROW
   - RIGHT ARROW
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - VOL UP
-  - '&mkp MB1'
-  - '&mkp MB3'
-  - '&mkp MB2'
   - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Gui+Ctl+LEFT ARROW
   - Gui+Ctl+UP ARROW
@@ -115,19 +122,12 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - VOLUME DOWN
-  - '&mkp MB4'
-  - PLAY PAUSE
-  - '&mkp MB5'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   '6':
   - {t: ▽, type: trans}

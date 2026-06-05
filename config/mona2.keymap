@@ -69,6 +69,33 @@
 
             tap-ms = <20>;
         };
+
+        my_comma_bang: my_comma_bang {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MY_COMMA_BANG";
+            bindings = <&kp COMMA>, <&kp EXCLAMATION>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
+
+        my_dot_question: my_dot_question {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MY_DOT_QUESTION";
+            bindings = <&kp PERIOD>, <&kp QUESTION>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
+
+        my_bs_del: my_bs_del {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MY_BS_DEL";
+            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -76,10 +103,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W      &kp E  &kp R          &kp T                                                                    &kp Y      &kp U  &kp I      &kp O    &lt 3 P
-&kp A             &kp S      &kp D  &kp F          &kp G                                       &none                        &kp H      &kp J  &kp K      &kp L    &lt 2 SEMICOLON
-&mt LEFT_SHIFT Z  &kp X      &kp C  &kp V          &kp B        &kp TAB                        &none                        &kp N      &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LEFT_WIN      &kp LCTRL  &none  &kp BACKSPACE  &lt 2 SPACE  &lt_to_layer_0 1 LANGUAGE_2    &lt_to_layer_0 6 LANGUAGE_1  &kp ENTER                             &lt 4 ESCAPE
+&kp Q             &kp W      &kp E  &kp R       &kp T                                                                     &kp Y      &kp U    &kp I           &kp O             &kp P
+&kp A             &kp S      &kp D  &kp F       &kp G                                       &none                         &kp H      &kp J    &kp K           &kp L             &lt 2 SEMICOLON
+&mt LEFT_SHIFT Z  &kp X      &kp C  &kp V       &kp B        &kp TAB                        &none                         &kp N      &lt 3 M  &my_comma_bang  &my_dot_question  &mt RIGHT_SHIFT SLASH
+&kp LEFT_WIN      &kp LCTRL  &none  &my_bs_del  &lt 2 SPACE  &lt_to_layer_0 1 LANGUAGE_2    &mt RIGHT_COMMAND LANGUAGE_1  &kp ENTER                                             &lt 4 ESCAPE
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -87,10 +114,10 @@
 
         layer_1 {
             bindings = <
-&trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS                     &trans  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans  &trans
-&trans  &kt NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS            &trans  &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &trans
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans     &trans    &trans  &trans  &kp LESS_THAN         &kp GREATER_THAN       &trans  &trans
-&trans  &kp NUMBER_0  &trans        &trans        &trans     &trans    &trans  &trans                                                       &trans
+&kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PLUS                     &trans  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSLASH  &trans
+&trans        &kt NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS            &trans  &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SQT        &trans
+&trans        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans     &trans    &trans  &trans  &kp LESS_THAN         &kp GREATER_THAN       &trans         &trans
+&trans        &trans        &trans        &trans        &trans     &trans    &trans  &trans                                                              &trans
             >;
 
             sensor-bindings = <&scroll_right_left>;
@@ -98,10 +125,10 @@
 
         MOUSE {
             bindings = <
-&trans     &kp LG(W)       &kp UP_ARROW    &kp LG(N)        &kp LG(T)                    &trans  &kp LC(LEFT_ARROW)  &kp F3    &kp LC(RIGHT_ARROW)  &trans
-&trans     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans               &trans  &trans  &mkp MB1            &mkp MB3  &mkp MB2             &trans
-&kp LG(Z)  &kp LG(X)       &kp LG(C)       &kp LG(V)        &trans     &trans    &trans  &trans  &mkp MB4            &trans    &mkp MB5             &trans
-&trans     &trans          &trans          &trans           &trans     &trans    &trans  &trans                                                     &trans
+&trans  &kp C_PREVIOUS          &kp UP_ARROW          &kp C_NEXT               &trans                    &trans             &kp LC(LEFT_ARROW)  &kp F3            &kp LC(RIGHT_ARROW)  &trans
+&trans  &kp LEFT_ARROW          &kp DOWN_ARROW        &kp RIGHT_ARROW          &trans            &trans  &kp C_VOL_UP       &mkp MB1            &mkp MB3          &mkp MB2             &trans
+&trans  &kp LG(LC(LEFT_ARROW))  &kp LG(LC(UP_ARROW))  &kp LG(LC(RIGHT_ARROW))  &trans  &trans    &trans  &kp C_VOLUME_DOWN  &mkp MB4            &kp C_PLAY_PAUSE  &mkp MB5             &trans
+&trans  &trans                  &trans                &trans                   &trans  &trans    &trans  &trans                                                                        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LEFT_ARROW RIGHT_ARROW>;
@@ -127,26 +154,6 @@
             >;
 
             sensor-bindings = <&scroll_up_down>;
-        };
-
-        layer_3 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans          &kp UP_ARROW    &trans           &trans
-&trans  &trans  &trans  &trans  &trans            &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans          &kp SPACE       &trans           &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                                   &trans
-            >;
-
-            sensor-bindings = <&inc_dec_kp LEFT_ARROW RIGHT_ARROW>;
-        };
-
-        layer_6 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
-            >;
         };
     };
 };

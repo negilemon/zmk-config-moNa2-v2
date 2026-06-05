@@ -38,8 +38,8 @@ layers:
   - LCTRL
   - LEFT ALT
   - {t: BACKSPACE, s: DELETE}
-  - {t: SPACE, h: '5'}
-  - {t: '&to_layer_0 LANGUAGE_2', h: '1'}
+  - {t: SPACE, h: '1'}
+  - {t: '&to_layer_0 LANGUAGE_2', h: '5'}
   - {t: LANGUAGE 1, h: RIGHT COMMAND}
   - {t: ENTER, h: '5'}
   - {t: ESCAPE, h: '4'}
@@ -81,8 +81,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -93,9 +93,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Ctl+Sft+TAB
-  - UP ARROW
   - Ctl+TAB
+  - UP ARROW
+  - Ctl+Sft+TAB
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}

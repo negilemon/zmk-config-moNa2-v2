@@ -16,7 +16,7 @@ layers:
   - D
   - F
   - G
-  - TAB
+  - ''
   - H
   - J
   - K
@@ -27,7 +27,7 @@ layers:
   - C
   - V
   - B
-  - ''
+  - TAB
   - ''
   - N
   - M
@@ -39,8 +39,8 @@ layers:
   - ''
   - BACKSPACE
   - {t: SPACE, h: '5'}
-  - {t: '&to_layer_0 LANGUAGE_2', h: '6'}
-  - {t: '&to_layer_0 LANGUAGE_1', h: '1'}
+  - {t: '&to_layer_0 LANGUAGE_2', h: '1'}
+  - {t: '&to_layer_0 LANGUAGE_1', h: '6'}
   - ENTER
   - {t: ESCAPE, h: '4'}
   '1':
@@ -65,7 +65,7 @@ layers:
   - )
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '0'
+  - {t: ▽, type: trans}
   - '1'
   - '2'
   - '3'
@@ -73,17 +73,17 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '{'
-  - '}'
+  - <
+  - '>'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '0'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   '5':
@@ -108,10 +108,10 @@ layers:
   - '&mkp MB3'
   - '&mkp MB2'
   - {type: held}
-  - {t: ▽, type: trans}
-  - COPY
-  - PASTE
-  - CUT
+  - Gui+Z
+  - Gui+X
+  - Gui+C
+  - Gui+V
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -168,8 +168,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
   - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   '4':
